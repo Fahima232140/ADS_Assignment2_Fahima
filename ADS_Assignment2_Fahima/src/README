@@ -1,0 +1,52 @@
+MyList Implementations
+This project provides several implementations of the MyList interface:
+
+MyArrayList<T>: A resizable array-based list offering efficient random access.
+MyLinkedList<T>: A dynamic list using linked nodes, efficient for frequent insertions and removals in the middle.
+Getting Started
+
+Compile the code: javac MyArrayList.java MyLinkedList.java MyList.java MyQueue.java MyStack.java MyMinHeap.java (or use a build tool like Maven or Gradle)
+Run the code (example for MyArrayList):
+Java
+public class Main {
+  public static void main(String[] args) {
+    MyArrayList<Integer> list = new MyArrayList<>();
+    list.add(1);
+    list.add(2);
+    list.add(3);
+    System.out.println(list); // Output: [1, 2, 3]
+
+    list.add(1, 5);
+    System.out.println(list); // Output: [1, 5, 2, 3]
+
+    System.out.println(list.get(2)); // Output: 2
+  }
+}
+Use code with caution.
+MyList Interface
+
+This interface defines the expected behavior of a list collection. Both MyArrayList and MyLinkedList implement this interface.
+
+MyArrayList<T>
+
+This class implements a resizable array-based list. It provides functionality similar to the built-in Java ArrayList class, but may not be as optimized.
+
+Key Methods:
+
+add(T item): Adds the element to the end of the list.
+add(int index, T item): Inserts the element at the specified index.
+get(int index): Returns the element at the specified index.
+set(int index, T item): Updates the element at the specified index.
+remove(int index): Removes the element at the specified index.
+size(): Returns the number of elements in the list.
+isEmpty(): Checks if the list is empty (always returns false in this implementation).
+iterator(): Returns an iterator for iterating through the list elements.
+MyLinkedList<T>
+
+This class implements a list using linked nodes. It offers dynamic resizing and may be more efficient for frequent insertions and removals in the middle of the list compared to MyArrayList.
+Key Methods (same as MyArrayList methods).
+Additional Implementations
+MyQueue<T>: Implements a queue using a MyArrayList internally. It follows a First-In-First-Out (FIFO) principle.
+MyStack<T>: Implements a stack using a MyArrayList internally. It follows a Last-In-First-Out (LIFO) principle.
+MyMinHeap<T>: Implements a min-heap using a MyArrayList internally. It efficiently retrieves the minimum element.
+Note: These additional implementations are not documented in detail here, but their code provides comments explaining their functionalities.
